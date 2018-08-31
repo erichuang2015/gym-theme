@@ -53,6 +53,11 @@
           <?php Trainers\render_trainers_overview();?>
         </article>
         <article class="front-page-content-section">
+          <div class="front-page-content-section__title">UNSERE MITGLIEDSCHAFTEN</div>
+          <?php require_once dirname(__FILE__) . '/kardia-resources/memberships.php';?>
+          <?php Memberships\render_memberships_overview();?>
+        </article>
+        <article class="front-page-content-section">
           <div class="front-page-content-section__title">UNSER TRAININGSANGEBOT</div>
           <?php require_once dirname(__FILE__) . '/kardia-resources/courses.php';?>
           <?php Courses\render_courses_overview();?>

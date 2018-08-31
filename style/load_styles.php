@@ -11,6 +11,7 @@ function load_styles()
         'kardia-front-page' => '/css/front-page.css',
         'kardia-trainers' => '/css/trainers.css',
         'kardia-courses' => '/css/courses.css',
+        'kardia-memberships' => '/css/memberships.css',
     ];
 
     foreach ($stylesheets as $style_key => $filename) {

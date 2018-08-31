@@ -1,0 +1,28 @@
+.memberships-overview {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.membership-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  height: 10vw;
+  flex: 1 1 10vw;
+
+  background-color: #e5434a;
+  color: #fff;
+}
+
+.membership-container__title {
+  font-size: 1vw;
+  margin-bottom: 0.5rem;
+}
+
+.membership-container__subtitle {
+  max-width: 75%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9vw;
+}
