@@ -1,0 +1,47 @@
+.trainers-overview {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.trainers-overview > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 20vw;
+  flex: 1 1 20vw;
+}
+
+.trainers-overview > div:hover > .trainer-inlay {
+  opacity: 1;
+}
+
+.trainer-inlay {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e5434a;
+  width: 85%;
+  height: 85%;
+
+  opacity: 0;
+
+  color: #fff;
+}
+
+.trainer-inlay__title {
+  font-size: 1.3vw;
+  margin-bottom: 0.5rem;
+}
+
+.trainer-inlay__subtitle {
+  max-width: 75%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9vw;
+}

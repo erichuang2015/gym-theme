@@ -1,0 +1,79 @@
+.front-page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+
+  background-image: url("../images/home-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.front-page-content-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.front-page-content-container--top {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1;
+}
+
+.front-page-content-container--bottom {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.front-page-container .main-logo {
+  margin-top: 30vh;
+  width: 40%;
+  margin-bottom: 15vh;
+}
+
+.front-page-container .cta-button {
+  margin-top: 1rem;
+}
+
+.front-page-about {
+  display: flex;
+  flex-flow: column nowrap;
+
+  max-width: 50%;
+
+  margin: 0 0 5rem 10rem;
+}
+
+.front-page-about__description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  max-width: 55%;
+}
+
+.front-page-about__header {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.front-page-about__subheader {
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.front-page-content-section {
+  background-color: #e5434a;
+}
+
+.front-page-content-section__title {
+  display: flex;
+  justify-content: center;
+
+  color: #fff;
+  font-size: 0.9rem;
+
+  padding: 1rem 0;
+}

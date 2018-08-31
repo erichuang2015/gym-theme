@@ -1,0 +1,13 @@
+.cta-button {
+  color: #e3454e;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #e3454e;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+
+  cursor: pointer;
+
+  font-size: .65rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}

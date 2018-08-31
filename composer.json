@@ -1,0 +1,6 @@
+{
+    "require": {
+        "htmlburger/carbon-fields": "^2.2",
+        "jjgrainger/posttypes": "^2.0"
+    }
+}

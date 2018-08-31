@@ -1,0 +1,27 @@
+.courses-overview {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.course-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 26vw;
+  flex: 1 1 26vw;
+}
+
+.course-container__title {
+  font-size: 2vw;
+  max-width: 60%;
+  color: #e5434a;
+}

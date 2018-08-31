@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Folklore;
+  src: url(../font/folklore.otf);
+}
+
+html {
+  height: 100%;
+  font-family: Folklore, monospace;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.coral {
+  color: #e5434a;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: #2c3131;
+}
+
+.page-content-container {
+  max-width: 900px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin: 3rem auto;
+}
