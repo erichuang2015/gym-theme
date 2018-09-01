@@ -1,7 +1,9 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-require_once dirname(__FILE__) . '/kardia-resources/init.php';
 require_once dirname(__FILE__) . '/style/load_styles.php';
+require_once dirname(__FILE__) . '/gym-core/GymResourcesManager.php';
+
+use GymCore\GymResources\GymResourcesManager;
 
 add_action('after_setup_theme', 'crb_load');
 function crb_load()
@@ -10,5 +12,10 @@ function crb_load()
     \Carbon_Fields\Carbon_Fields::boot();
 }
 
-add_action('carbon_fields_register_fields', 'init_admin_ui');
+function init_gym_entities()
+{
+    GymResourcesManager::init();
+}
+
+add_action('carbon_fields_register_fields', 'init_gym_entities');
 add_action('wp_enqueue_scripts', 'load_styles');

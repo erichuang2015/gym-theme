@@ -1,3 +1,7 @@
+<?php
+require_once dirname(__FILE__) . '/gym-core/GymResourcesManager.php';
+use GymCore\GymResources\GymResourcesManager;
+?>
 <!DOCTYPE html>
 <html <?php language_attributes();?> class="no-js">
   <head>
@@ -49,20 +53,17 @@
       <section class="page-content-container">
         <article class="front-page-content-section">
           <div class="front-page-content-section__title">UNSER TEAM</div>
-          <?php require_once dirname(__FILE__) . '/kardia-resources/trainers.php';?>
-          <?php Trainers\render_trainers_overview();?>
-        </article>
-        <article class="front-page-content-section">
-          <div class="front-page-content-section__title">UNSERE MITGLIEDSCHAFTEN</div>
-          <?php require_once dirname(__FILE__) . '/kardia-resources/memberships.php';?>
-          <?php Memberships\render_memberships_overview();?>
+          <?php GymResourcesManager::get_trainers_resource()->render();?>
         </article>
         <article class="front-page-content-section">
           <div class="front-page-content-section__title">UNSER TRAININGSANGEBOT</div>
-          <?php require_once dirname(__FILE__) . '/kardia-resources/courses.php';?>
-          <?php Courses\render_courses_overview();?>
+          <?php GymResourcesManager::get_courses_resource()->render();?>
         </article>
-      </div>
+        <article class="front-page-content-section">
+          <div class="front-page-content-section__title">UNSERE MITGLIEDSCHAFTEN</div>
+          <?php GymResourcesManager::get_memberships_resource()->render();?>
+        </article>
+      </section>
     </main>
   </body>
   <?php get_footer();?>
