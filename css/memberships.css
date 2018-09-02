@@ -27,6 +27,12 @@
   border: 3px solid #fff;
 }
 
+@media (min-width: 65em) {
+  .membership-container {
+    height: 20vw;
+  }
+}
+
 @media (min-width: 22em) and (max-width: 45em) {
   .membership-container {
     height: 50vw;
@@ -43,7 +49,7 @@
   }
 }
 .membership-container__title {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
 

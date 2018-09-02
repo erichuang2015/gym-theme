@@ -18,8 +18,14 @@
 }
 
 .course-container__title {
-  font-size: 3vw;
+  font-size: 1.8vw;
   color: #e5434a;
+}
+
+@media (min-width: 65em) {
+  .course-container {
+    height: 35vw;
+  }
 }
 
 @media (min-width: 30em) and (max-width: 45em) {

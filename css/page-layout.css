@@ -33,5 +33,13 @@ a {
 }
 
 .page-content-container {
+  margin: 3rem auto;
   margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 65em) {
+  .page-content-container {
+    max-width: 978px;
+    margin: 3rem auto;
+  }
 }

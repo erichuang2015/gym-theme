@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: 65em) {
+  .trainers-overview > div {
+    height: 27vw;
+  }
+}
+
 @media (min-width: 22em) and (max-width: 45em) {
   .trainers-overview > div {
     height: 50vw;
