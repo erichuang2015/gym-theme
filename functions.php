@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 require_once dirname(__FILE__) . '/style/load_styles.php';
-require_once dirname(__FILE__) . '/gym-core/GymResourcesManager.php';
+require_once dirname(__FILE__) . '/core/resources/GymResourcesManager.php';
 
 use GymCore\GymResources\GymResourcesManager;
 

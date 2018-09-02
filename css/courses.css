@@ -12,12 +12,29 @@
   justify-content: center;
   align-items: center;
 
-  height: 26vw;
-  flex: 1 1 26vw;
+  height: 40vw;
+  flex: 1 1 51%;
+  max-width: 50%;
 }
 
 .course-container__title {
-  font-size: 2vw;
-  max-width: 60%;
+  font-size: 3vw;
   color: #e5434a;
+}
+
+@media (min-width: 30em) and (max-width: 45em) {
+  .course-container__title {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 30em) {
+  .course-container {
+    height: 95vw;
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .course-container__title {
+    font-size: 5vw;
+  }
 }

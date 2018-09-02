@@ -2,7 +2,7 @@
 namespace GymCore\GymResources;
 
 require_once dirname(__FILE__) . '/GymResource.php';
-require_once dirname(__FILE__) . '/GymPostTypesManager.php';
+require_once dirname(__FILE__) . '/../GymPostTypesManager.php';
 
 use Carbon_Fields\Field;
 use GymCore\GymPostTypesManager;
@@ -12,7 +12,9 @@ class CoursesResource extends \GymCore\GymResource
     public function render_course($course_post)
     {
         echo "<div class=\"course-container\" style=\"background-image:url({$course_post['image']});\">";
+        echo '<div>';
         echo "<span class=\"course-container__title\">{$course_post['name']}</span>";
+        echo '</div>';
         echo '</div>';
     }
     public function render()

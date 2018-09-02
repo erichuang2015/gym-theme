@@ -4,7 +4,7 @@ namespace GymCore\GymResources;
 require_once dirname(__FILE__) . '/TrainersResource.php';
 require_once dirname(__FILE__) . '/CoursesResource.php';
 require_once dirname(__FILE__) . '/MembershipsResource.php';
-require_once dirname(__FILE__) . '/GymPostTypesManager.php';
+require_once dirname(__FILE__) . '/../GymPostTypesManager.php';
 
 use GymCore\GymPostTypesManager;
 use GymCore\GymResources\CoursesResource;

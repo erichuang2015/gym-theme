@@ -7,22 +7,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
 
-  height: 10vw;
-  flex: 1 1 10vw;
+  height: 25vw;
+  flex: 1 1 25%;
+  max-width: 26%;
 
   background-color: #e5434a;
   color: #fff;
 }
 
+.membership-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  width: 75%;
+  height: 75%;
+  border: 3px solid #fff;
+}
+
+@media (min-width: 22em) and (max-width: 45em) {
+  .membership-container {
+    height: 50vw;
+    flex: 1 1 50%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 22em) {
+  .membership-container {
+    height: 95vw;
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
 .membership-container__title {
-  font-size: 1vw;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .membership-container__subtitle {
-  max-width: 75%;
+  font-size: 0.75rem;
+  margin: 0 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9vw;
 }

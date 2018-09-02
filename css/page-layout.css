@@ -29,11 +29,9 @@ a {
   display: flex;
   flex-flow: column nowrap;
 
-  background-color: #2c3131;
+  background-color: #484e4e;
 }
 
 .page-content-container {
-  max-width: 900px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  margin: 3rem auto;
+  margin: 0 auto 3rem auto;
 }

@@ -3,7 +3,7 @@ namespace GymCore\GymResources;
 
 require_once dirname(__FILE__) . '/GymResource.php';
 require_once dirname(__FILE__) . '/CoursesResource.php';
-require_once dirname(__FILE__) . '/GymPostTypesManager.php';
+require_once dirname(__FILE__) . '/../GymPostTypesManager.php';
 
 use Carbon_Fields\Field;
 use GymCore\GymPostTypesManager;
@@ -35,7 +35,7 @@ class TrainersResource extends \GymCore\GymResource
     {
         echo "<div style=\"background-image:url({$trainer_post['image']});\">";
         echo '<div class="trainer-inlay">';
-        echo "<span class=\"trainer-inlay__title\">{$trainer_post['name']}</span>";
+        echo "<div class=\"trainer-inlay__title\">{$trainer_post['name']}</div>";
         $this->render_trainer_inlay_courses($trainer_post);
         echo '</div>';
         echo '</div>';

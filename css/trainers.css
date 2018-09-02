@@ -12,8 +12,9 @@
   justify-content: center;
   align-items: center;
 
-  height: 20vw;
-  flex: 1 1 20vw;
+  height: 30vw;
+  flex: 1 1 33%;
+  max-width: 34%;
 }
 
 .trainers-overview > div:hover > .trainer-inlay {
@@ -36,12 +37,34 @@
 }
 
 .trainer-inlay__title {
-  font-size: 1.3vw;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .trainer-inlay__subtitle {
-  max-width: 75%;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9vw;
+  font-size: 0.75rem;
+  margin: 0 1.5rem;
+}
+
+@media (max-width: 45em) {
+  .trainer-inlay {
+    display: none;
+  }
+}
+
+@media (min-width: 22em) and (max-width: 45em) {
+  .trainers-overview > div {
+    height: 50vw;
+    flex: 1 1 50%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 22em) {
+  .trainers-overview > div {
+    height: 95vw;
+    flex: 1 1 100%;
+    max-width: none;
+  }
 }

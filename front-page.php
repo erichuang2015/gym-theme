@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/gym-core/GymResourcesManager.php';
+require_once dirname(__FILE__) . '/core/resources/GymResourcesManager.php';
 use GymCore\GymResources\GymResourcesManager;
 ?>
 <!DOCTYPE html>
@@ -56,12 +56,12 @@ use GymCore\GymResources\GymResourcesManager;
           <?php GymResourcesManager::get_trainers_resource()->render();?>
         </article>
         <article class="front-page-content-section">
-          <div class="front-page-content-section__title">UNSER TRAININGSANGEBOT</div>
-          <?php GymResourcesManager::get_courses_resource()->render();?>
+          <div class="front-page-content-section__title front-page-content-section__title--border">UNSERE MITGLIEDSCHAFTEN</div>
+          <?php GymResourcesManager::get_memberships_resource()->render();?>
         </article>
         <article class="front-page-content-section">
-          <div class="front-page-content-section__title">UNSERE MITGLIEDSCHAFTEN</div>
-          <?php GymResourcesManager::get_memberships_resource()->render();?>
+          <div class="front-page-content-section__title">UNSER TRAININGSANGEBOT</div>
+          <?php GymResourcesManager::get_courses_resource()->render();?>
         </article>
       </section>
     </main>

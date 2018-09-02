@@ -27,6 +27,21 @@
   align-items: flex-start;
 }
 
+@media (max-width: 40em) {
+  .front-page-content-container--bottom {
+    justify-content: center;
+    align-items: center;
+  }
+  .front-page-about {
+    margin: 0 0 5rem 0 !important;
+    max-width: none !important;
+    align-items: center;
+  }
+  .front-page-about__description {
+    max-width: 80% !important;
+  }
+}
+
 .front-page-container .main-logo {
   margin-top: 30vh;
   width: 40%;
@@ -65,9 +80,12 @@
 }
 
 .front-page-content-section {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   background-color: #e5434a;
+}
 
-  margin-bottom: 1.5rem;
+.front-page-content-section:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .front-page-content-section__title {
@@ -78,4 +96,7 @@
   font-size: 0.9rem;
 
   padding: 1rem 0;
+}
+.front-page-content-section__title--border {
+  border-bottom: 3px solid #fff;
 }

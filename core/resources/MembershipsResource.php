@@ -2,7 +2,7 @@
 namespace GymCore\GymResources;
 
 require_once dirname(__FILE__) . '/GymResource.php';
-require_once dirname(__FILE__) . '/GymPostTypesManager.php';
+require_once dirname(__FILE__) . '/../GymPostTypesManager.php';
 
 use Carbon_Fields\Field;
 use GymCore\GymPostTypesManager;
@@ -12,11 +12,13 @@ class MembershipsResource extends \GymCore\GymResource
     public function render_membership($membership_post)
     {
         echo '<div class="membership-container">';
+        echo '<div>';
         echo "<span class=\"membership-container__title\">{$membership_post['name']}</span>";
         echo "<span class=\"membership-container__subtitle\">{$membership_post['price']}</span>";
         if ($membership_post['price_reduced']) {
             echo "<span class=\"membership-container__subtitle\">({$membership_post['price_reduced']} ermäßigt)</span>";
         }
+        echo '</div>';
         echo '</div>';
     }
 
