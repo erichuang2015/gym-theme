@@ -1,4 +1,12 @@
 <footer class="footer">
-  <span>FOOTER</span>
+  <div class="footer-column">
+    <span>Kardia e.V.</span>
+    <span class="dot">•</span>
+    <span>Ehrenbergstr. 15</span>
+    <span class="dot">•</span>
+    <span>10245 Berlin-Friedrichshain</span>
+  </div>
+  <div class="footer-column"></div>
+  <div class="footer-column"></div>
 </footer>
-<?php wp_footer(); ?>
+<?php wp_footer();?>
