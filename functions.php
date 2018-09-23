@@ -7,7 +7,6 @@ require_once dirname(__FILE__) . '/core/pages/GymPagesManager.php';
 use GymCore\GymPages\GymPagesManager;
 use GymCore\GymResources\GymResourcesManager;
 
-add_action('after_setup_theme', 'crb_load');
 function crb_load()
 {
     require_once 'vendor/autoload.php';
@@ -20,5 +19,17 @@ function init_gym_entities()
     GymPagesManager::init();
 }
 
+function register_menus()
+{
+    register_nav_menus(
+        [
+            'top-navigation' => __('Top Navigation Menu'),
+            'sidebar-navigation' => __('Sidebar Navigation Menu'),
+        ]
+    );
+}
+
+add_action('after_setup_theme', 'crb_load');
+add_action('init', 'register_menus');
 add_action('carbon_fields_register_fields', 'init_gym_entities');
 add_action('wp_enqueue_scripts', 'load_styles');

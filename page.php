@@ -13,14 +13,7 @@ use GymCore\GymPages\GymPagesManager;
   <body <?php body_class();?>>
     <?php get_header();?>
     <aside class="sidebar">
-      <ul>
-        <li>
-          <a href="#">Verein</a>
-        </li>
-        <li>
-          <a href="#">Partner</a>
-        </li>
-      </ul>
+      <?php wp_nav_menu(['theme_location' => 'sidebar-navigation', 'menu_class' => false, 'container' => false]);?>
     </aside>
     <main class="page-container">
       <?php GymPagesManager::render_page();?>

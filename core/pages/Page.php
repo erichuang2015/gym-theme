@@ -46,9 +46,6 @@ class Page
     public static function render($custom_content_render)
     {
         $page_options = self::get_page_options();
-        /* echo '<pre>';
-        print_r($page_options);
-        echo '</pre>'; */
         $title = $page_options['post_title'];
         $background_hero_image = $page_options['background_image'];
         echo "<section style=\"background-image:url({$background_hero_image});\" class=\"page-hero-container page-hero-container--centered\">";
