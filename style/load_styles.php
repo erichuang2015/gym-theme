@@ -3,6 +3,7 @@ function load_styles()
 {
     $stylesheets = [
         'kardia-main-layout' => '/css/page-layout.css',
+        'kardia-page' => '/css/page.css',
         'kardia-header' => '/css/header.css',
         'kardia-footer' => '/css/footer.css',
         'kardia-sidebar' => '/css/sidebar.css',

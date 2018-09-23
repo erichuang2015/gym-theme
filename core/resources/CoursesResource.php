@@ -52,13 +52,13 @@ class CoursesResource extends \GymCore\GymResource
             [
                 'title' => 'Course Info',
                 'fields' => [
-                    'name' => Field::make('text', 'name', 'Course Name'),
+                    Field::make('text', 'name', 'Course Name'),
                 ],
             ],
             [
                 'title' => 'Course Image',
                 'fields' => [
-                    'image' => Field::make('image', 'image', 'Photo')
+                    Field::make('image', 'image', 'Photo')
                         ->set_value_type('url'),
                 ],
                 'context' => 'side',

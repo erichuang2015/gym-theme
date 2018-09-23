@@ -15,17 +15,17 @@ class FrontPage
     public static function init()
     {
         self::$optionsPage = new OptionsPage('Front Page Options', [
-            'background_image' => Field::make('image', 'front_page_background_image', 'Hero Background Image')
+            Field::make('image', 'front_page_background_image', 'Hero Background Image')
                 ->set_value_type('url'),
-            'about_title' => Field::make('complex', 'front_page_about_title', 'About Info Title Lines')
+            Field::make('complex', 'front_page_about_title', 'About Info Title Lines')
                 ->add_fields(array(
                     Field::make('text', 'line_text'),
                 )),
-            'about_subtitle' => Field::make('complex', 'front_page_about_subtitle', 'About Info Subtitle Lines')
+            Field::make('complex', 'front_page_about_subtitle', 'About Info Subtitle Lines')
                 ->add_fields(array(
                     Field::make('text', 'line_text'),
                 )),
-            'about_description' => Field::make('rich_text', 'front_page_about_description', 'About Info Description'),
+            Field::make('rich_text', 'front_page_about_description', 'About Info Description'),
         ]);
     }
 
@@ -73,8 +73,8 @@ class FrontPage
 
     private static function render_about_description()
     {
+        $description = carbon_get_theme_option('front_page_about_description');
         if (!empty($description)) {
-            $description = carbon_get_theme_option('front_page_about_description');
             echo "<section class=\"front-page-about__description\">{$description}</section>";
         }
     }
@@ -90,7 +90,7 @@ class FrontPage
     private static function render_hero()
     {
         $background_hero_image = carbon_get_theme_option('front_page_background_image');
-        echo "<section style=\"background-image:url({$background_hero_image});\" class=\"front-page-container\">";
+        echo "<section style=\"background-image:url({$background_hero_image});\" class=\"page-hero-container\">";
         echo '<section class="front-page-content-container front-page-content-container--top">';
         self::render_logo();
         self::render_cta();
@@ -120,7 +120,7 @@ class FrontPage
     private static function render_courses()
     {
         echo '<article class="front-page-content-section">';
-        echo '<div class="front-page-content-section__title">UNSER TRAININGSANGEBOT</div>';
+        echo '<div class="front-page-content-section__title front-page-content-section__title--black">UNSER TRAININGSANGEBOT</div>';
         GymResourcesManager::get_courses_resource()->render_front_page();
         echo '</article>';
     }

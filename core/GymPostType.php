@@ -25,8 +25,11 @@ class GymPostType
     {
         $title = $container_opts['title'];
         $fields = $container_opts['fields'];
-        $this->fields = array_merge($this->fields, array_keys($fields));
         $carbon_fields = array_values($fields);
+        $field_names = array_map(function ($carbon_field) {
+            return $carbon_field->get_base_name();
+        }, $carbon_fields);
+        $this->fields = array_merge($this->fields, $field_names);
         $container = Container::make('post_meta', $title)
             ->where('post_type', '=', $this->post_type_slug)
             ->add_fields($carbon_fields);
@@ -46,10 +49,12 @@ class GymPostType
 
     public function get_post_by_id($post_id)
     {
-        return array_reduce($this->fields, function ($result, $field_slug) use ($post_id) {
+        $base_fields = (array) get_post($post_id);
+        $custom_fields = array_reduce($this->fields, function ($result, $field_slug) use ($post_id) {
             $result[$field_slug] = carbon_get_post_meta($post_id, $field_slug);
             return $result;
         }, []);
+        return array_merge($base_fields, $custom_fields);
     }
 
     public function get_posts()

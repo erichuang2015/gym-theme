@@ -9,7 +9,7 @@ use GymCore\GymPostTypesManager;
 
 class MembershipsResource extends \GymCore\GymResource
 {
-    public function render_membership($membership_post)
+    public function render_membership_front_page($membership_post)
     {
         echo '<div class="membership-container">';
         echo '<div>';
@@ -26,7 +26,7 @@ class MembershipsResource extends \GymCore\GymResource
     {
         echo '<div class="memberships-overview">';
         foreach ($this->get_posts() as $membership_post) {
-            $this->render_membership($membership_post);
+            $this->render_membership_front_page($membership_post);
         }
         echo '</div>';
     }
@@ -56,9 +56,9 @@ class MembershipsResource extends \GymCore\GymResource
             [
                 'title' => 'Membership Info',
                 'fields' => [
-                    'name' => Field::make('text', 'name', 'Membership Name'),
-                    'price' => Field::make('text', 'price', 'Membership Price'),
-                    'price_reduced' => Field::make('text', 'price_reduced', 'Membership Price (Reduced)'),
+                    Field::make('text', 'name', 'Membership Name'),
+                    Field::make('text', 'price', 'Membership Price'),
+                    Field::make('text', 'price_reduced', 'Membership Price (Reduced)'),
                 ],
             ],
         ];

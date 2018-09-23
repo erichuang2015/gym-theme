@@ -1,0 +1,49 @@
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: #484e4e;
+}
+
+.page-content-container {
+  margin: 3rem auto;
+  margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 65em) {
+  .page-content-container {
+    max-width: 978px;
+    margin: 3rem auto;
+  }
+}
+
+.page-hero-container {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 100vh;
+}
+
+.page-hero-container--centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 10vw;
+}
+
+.page-hero-container .main-logo {
+  margin-top: 30vh;
+  width: 40%;
+  margin-bottom: 15vh;
+}
+
+.page-hero-container .cta-button {
+  margin-top: 1rem;
+}

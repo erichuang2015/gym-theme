@@ -3,6 +3,8 @@ namespace GymCore;
 
 require_once dirname(__FILE__) . '/GymPostType.php';
 
+use GymCore\GymPostType;
+
 class GymPostTypesManager
 {
     private static $trainers_post_type = null;

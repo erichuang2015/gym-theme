@@ -75,8 +75,8 @@ class TrainersResource extends \GymCore\GymResource
             [
                 'title' => 'Trainer Info',
                 'fields' => [
-                    'name' => Field::make('text', 'name', 'Full Name'),
-                    'courses' => Field::make('association', 'courses')
+                    Field::make('text', 'name', 'Full Name'),
+                    Field::make('association', 'courses')
                         ->set_types(array(
                             array(
                                 'type' => 'post',
