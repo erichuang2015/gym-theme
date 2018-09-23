@@ -13,6 +13,7 @@ function load_styles()
         'kardia-trainers' => '/css/trainers.css',
         'kardia-courses' => '/css/courses.css',
         'kardia-memberships' => '/css/memberships.css',
+        'kardia-switch-list' => '/css/switch-list.css',
     ];
 
     foreach ($stylesheets as $style_key => $filename) {

@@ -20,8 +20,8 @@ class GymPagesManager
         FrontPage::render();
     }
 
-    public static function render_page($page_id)
+    public static function render_page($custom_content_render)
     {
-        Page::render($page_id);
+        Page::render($custom_content_render);
     }
 };
