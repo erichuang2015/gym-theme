@@ -1,2 +1,2 @@
-# kardia-theme
-Kardia Berlin Wordpress Theme
+# gym-theme
+A Wordpress theme for gyms
