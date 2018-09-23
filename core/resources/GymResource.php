@@ -15,9 +15,14 @@ class GymResource
         return null;
     }
 
-    public function render()
+    public function render_front_page()
     {
-        echo 'Base class render. You should override this func!';
+        echo 'Base class render_front_page. You should override this func!';
+    }
+
+    public function render_page()
+    {
+        echo 'Base class render_page. You should override this func!';
     }
 
     protected function get_slug()

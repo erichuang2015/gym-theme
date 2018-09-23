@@ -14,7 +14,6 @@
 
   height: 30vw;
   flex: 1 1 33%;
-  max-width: 34%;
 }
 
 .trainers-overview > div:hover > .trainer-inlay {
@@ -55,7 +54,7 @@
 
 @media (min-width: 65em) {
   .trainers-overview > div {
-    height: 27vw;
+    height: 22vw;
   }
 }
 
@@ -63,7 +62,6 @@
   .trainers-overview > div {
     height: 50vw;
     flex: 1 1 50%;
-    max-width: none;
   }
 }
 
@@ -71,6 +69,5 @@
   .trainers-overview > div {
     height: 95vw;
     flex: 1 1 100%;
-    max-width: none;
   }
 }

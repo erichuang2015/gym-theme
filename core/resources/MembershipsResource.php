@@ -22,7 +22,16 @@ class MembershipsResource extends \GymCore\GymResource
         echo '</div>';
     }
 
-    public function render()
+    public function render_front_page()
+    {
+        echo '<div class="memberships-overview">';
+        foreach ($this->get_posts() as $membership_post) {
+            $this->render_membership($membership_post);
+        }
+        echo '</div>';
+    }
+
+    public function render_page()
     {
         echo '<div class="memberships-overview">';
         foreach ($this->get_posts() as $membership_post) {

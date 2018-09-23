@@ -46,7 +46,16 @@ class TrainersResource extends \GymCore\GymResource
         return GymPostTypesManager::get_trainers_post_type();
     }
 
-    public function render()
+    public function render_front_page()
+    {
+        echo '<div class="trainers-overview">';
+        foreach ($this->get_posts() as $trainer_post) {
+            $this->render_trainer($trainer_post);
+        }
+        echo '</div>';
+    }
+
+    public function render_page()
     {
         echo '<div class="trainers-overview">';
         foreach ($this->get_posts() as $trainer_post) {

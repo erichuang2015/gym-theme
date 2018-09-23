@@ -17,7 +17,17 @@ class CoursesResource extends \GymCore\GymResource
         echo '</div>';
         echo '</div>';
     }
-    public function render()
+
+    public function render_front_page()
+    {
+        echo '<div class="courses-overview">';
+        foreach ($this->get_posts() as $course_post) {
+            $this->render_course($course_post);
+        }
+        echo '</div>';
+    }
+
+    public function render_page()
     {
         echo '<div class="courses-overview">';
         foreach ($this->get_posts() as $course_post) {
