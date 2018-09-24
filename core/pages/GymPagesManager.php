@@ -20,7 +20,7 @@ class GymPagesManager
         FrontPage::render();
     }
 
-    public static function render_page($custom_content_render)
+    public static function render_page($custom_content_render = null)
     {
         Page::render($custom_content_render);
     }

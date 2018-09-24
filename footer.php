@@ -8,5 +8,5 @@
   </div>
   <div class="footer-column"></div>
   <div class="footer-column"></div>
+  <?php wp_footer();?>
 </footer>
-<?php wp_footer();?>
