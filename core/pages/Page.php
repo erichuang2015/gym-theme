@@ -30,10 +30,10 @@ class Page
     private static function render_cta()
     {
         echo '
-            <span>\/</span>
-            <span>\/</span>
-            <span>\/</span>
-            <span>\/</span>
+            <span class="pseudo-arrow">\/</span>
+            <span class="pseudo-arrow">\/</span>
+            <span class="pseudo-arrow">\/</span>
+            <span class="pseudo-arrow">\/</span>
             <button class="cta-button cta-button--white">TRAINIERE MIT UNS</button>
         ';
     }

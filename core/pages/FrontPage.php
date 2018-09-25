@@ -47,10 +47,10 @@ class FrontPage
     private static function render_cta()
     {
         echo '
-            <span class="coral">\/</span>
-            <span class="coral">\/</span>
-            <span class="coral">\/</span>
-            <span class="coral">\/</span>
+            <span class="pseudo-arrow coral">\/</span>
+            <span class="pseudo-arrow coral">\/</span>
+            <span class="pseudo-arrow coral">\/</span>
+            <span class="pseudo-arrow coral">\/</span>
             <button class="cta-button">TRAINIERE MIT UNS</button>
         ';
     }

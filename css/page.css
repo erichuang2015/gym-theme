@@ -6,8 +6,7 @@
 }
 
 .page-content-container {
-  margin: 3rem auto;
-  margin: 0 auto 3rem auto;
+  margin: 0;
 }
 
 @media (min-width: 65em) {
@@ -37,6 +36,8 @@
 .page-title {
   font-size: 8vw;
   margin: 25vh 0;
+  text-transform: uppercase;
+  letter-spacing: -2px;
 }
 
 .page-hero-container .main-logo {

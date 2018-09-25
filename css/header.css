@@ -20,4 +20,5 @@
 
 .header__nav ul li {
   margin: 0 1.5rem;
+  text-transform: uppercase;
 }

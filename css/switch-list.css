@@ -38,6 +38,7 @@
 
   .switch-list-block__text > h1 {
     font-size: 6vw !important;
+    line-height: 5vw !important;
   }
 }
 
@@ -48,6 +49,7 @@
 
   .switch-list-block__text > h1 {
     font-size: 3vw !important;
+    line-height: 2.5vw !important;
   }
 }
 
@@ -64,7 +66,9 @@
 
 .switch-list-block__text > h1 {
   font-size: 3.5vw;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  line-height: 3vw;
 }
 .switch-list-block__text > * {
   margin-left: 4rem;
