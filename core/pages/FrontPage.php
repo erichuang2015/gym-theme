@@ -17,6 +17,7 @@ class FrontPage
         self::$optionsPage = new OptionsPage('Front Page Options', [
             Field::make('image', 'front_page_background_image', 'Hero Background Image')
                 ->set_value_type('url'),
+            Field::make('text', 'front_page_logo_subtitle', 'Logo Subtitle'),
             Field::make('complex', 'front_page_about_title', 'About Info Title Lines')
                 ->add_fields(array(
                     Field::make('text', 'line_text'),
@@ -37,10 +38,14 @@ class FrontPage
 
     private static function render_logo()
     {
+        $subtitle = carbon_get_theme_option('front_page_logo_subtitle');
         echo '<div class="main-logo">';
         echo '<object type="image/svg+xml" data="/wp-content/themes/kardia/images/logo-white.svg">';
         echo "Your browser doesn't support SVG images.";
         echo '</object>';
+        echo '<div class="main-logo__subtitle">';
+        echo "<h2>{$subtitle}</h2>";
+        echo '</div>';
         echo '</div>';
     }
 

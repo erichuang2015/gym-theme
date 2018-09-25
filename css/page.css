@@ -40,10 +40,30 @@
   letter-spacing: -2px;
 }
 
+@media (max-width: 45em) {
+  .page-hero-container .main-logo {
+    width: 70% !important;
+  }
+  .page-hero-container .main-logo .main-logo__subtitle > h2 {
+    font-size: 3vw !important;
+  }
+}
+
 .page-hero-container .main-logo {
   margin-top: 30vh;
-  width: 40%;
+  width: 60%;
   margin-bottom: 15vh;
+}
+
+.page-hero-container .main-logo .main-logo__subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.page-hero-container .main-logo .main-logo__subtitle > h2 {
+  font-size: 2vw;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .page-hero-container .cta-button {

@@ -13,7 +13,7 @@ class FAQsResource extends \GymCore\GymResource
     {
         echo '<div class="faq-container">';
         echo '<div class="faq-container__question">';
-        echo $faq_post['question'];
+        echo "<h1>{$faq_post['question']}</h1>";
         echo '</div>';
         echo '<div class="faq-container__answer">';
         echo $faq_post['answer'];
