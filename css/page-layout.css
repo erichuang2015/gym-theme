@@ -30,7 +30,18 @@ a {
 }
 .arrow-block {
   margin-bottom: 3rem;
+  display: flex;
 }
-.arrow-block__row .pseudo-arrow {
+.arrow-block--compact .pseudo-arrow {
+  margin: -1.2rem -.2rem;
+}
+.arrow-block--clickable {
+  cursor: pointer;
+}
+.arrow-block__column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.arrow-arrow-block__column .pseudo-arrow {
   margin: 0 -2px;
 }

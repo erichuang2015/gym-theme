@@ -6,7 +6,7 @@ require_once dirname(__FILE__) . '/../render.php';
 require_once dirname(__FILE__) . '/OptionsPage.php';
 
 use Carbon_Fields\Field;
-use function GymCore\Render\render_arrow_row;
+use function GymCore\Render\render_arrow_block;
 use function GymCore\Render\render_cta_button;
 use GymCore\GymPages\OptionsPage;
 use GymCore\GymResources\GymResourcesManager;
@@ -58,7 +58,7 @@ class FrontPage
     {
         $label = carbon_get_theme_option('cta_label');
         $url = carbon_get_theme_option('cta_url');
-        render_arrow_row(3);
+        render_arrow_block("#fff", -90, 4, 1, true);
         render_cta_button($label, $url);
     }
 

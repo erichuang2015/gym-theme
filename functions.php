@@ -32,6 +32,7 @@ function register_menus()
 
 function hook_javascript()
 {
+    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jump.js/1.0.2/jump.min.js"></script>';
     echo '<script src="https://use.fontawesome.com/45f9febe0c.js"></script>';
     echo '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">';
 }

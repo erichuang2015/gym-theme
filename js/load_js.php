@@ -4,6 +4,7 @@ function load_js()
     $scripts = [
         'menu' => '/js/menu.js',
         'faq' => '/js/faq.js',
+        'misc_utils' => '/js/misc-utils.js',
     ];
 
     foreach ($scripts as $script_key => $filename) {

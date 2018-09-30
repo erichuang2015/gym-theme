@@ -18,21 +18,25 @@ function render_switch_list($blocks)
     echo '</div>';
 }
 
-function render_arrow_row($color = '#e5434a', $number_of_arrows = 3, $rotation = 0)
+function render_arrow_column($color = '#e5434a', $number_of_arrows = 3, $rotation = 0)
 {
+    echo '<div class="arrow-block__column">';
     foreach (range(1, $number_of_arrows) as $index) {
         echo "<span class=\"pseudo-arrow\" style=\"color: {$color}; transform: rotate({$rotation}deg)\">\/</span>";
     }
+    echo '</div>';
 }
 
-function render_arrow_block($color = '#e5434a', $rotation = 0, $number_of_arrows = 3, $number_of_rows = 3)
+function render_arrow_block($color = '#e5434a', $rotation = 0, $number_of_arrows = 3, $number_of_rows = 3, $with_jump = false, $compact = false)
 {
-
-    echo '<div class="arrow-block">';
+    $compact_class = $compact ? 'arrow-block arrow-block--compact' : 'arrow-block';
+    if ($with_jump) {
+        echo "<div class=\"{$compact_class} arrow-block--clickable\" onclick=\"arrow_jump();\">";
+    } else {
+        echo "<div class=\"{$compact_class}\">";
+    }
     foreach (range(1, $number_of_rows) as $index) {
-        echo '<div class="arrow-block__row">';
-        render_arrow_row($color, $number_of_arrows, $rotation);
-        echo '</div>';
+        render_arrow_column($color, $number_of_arrows, $rotation);
     }
     echo '</div>';
 }

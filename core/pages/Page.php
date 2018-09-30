@@ -5,7 +5,7 @@ require_once dirname(__FILE__) . '/../GymPostType.php';
 require_once dirname(__FILE__) . '/../render.php';
 
 use Carbon_Fields\Field;
-use function GymCore\Render\render_arrow_row;
+use function GymCore\Render\render_arrow_block;
 use GymCore\GymPostType;
 
 class Page
@@ -41,7 +41,7 @@ class Page
 
     private static function render_cta()
     {
-        render_arrow_row("#fff");
+        render_arrow_block("#fff", 0, 4, 1, true);
         self::render_cta_button();
     }
 
@@ -59,7 +59,7 @@ class Page
         echo "<h1 class=\"page-title\">{$title}</h1>";
         self::render_cta();
         echo '</section>';
-        echo '<section class=\"page-content-container">';
+        echo '<section class="page-content-container">';
         if (!empty($custom_content_render)) {
             $custom_content_render();
         } else {

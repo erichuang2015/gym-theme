@@ -46,7 +46,7 @@ class MembershipsResource extends \GymCore\GymResource
     public function render_membership($membership_post, $cta_label, $cta_url)
     {
         echo '<div class="membership-container">';
-        render_arrow_block('#fff', -90, 4);
+        render_arrow_block('#fff', -90, 3, 4, false, true);
         echo "<span class=\"membership-container__title\">{$membership_post['name']}</span>";
         $this->render_membership_courses($membership_post);
         $this->render_membership_prices($membership_post);
