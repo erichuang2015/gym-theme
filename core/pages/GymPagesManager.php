@@ -17,10 +17,15 @@ class GymPagesManager
     {
         Page::init();
         FrontPage::init();
-        new OptionsPage('Memberships and fees options', [
+        new OptionsPage('Memberships And Fees Options', [
             Field::make('rich_text', 'gym_info_fee_order', 'Gym Fees Info'),
             Field::make('rich_text', 'gym_info_cancellation', 'Membership Cancellation Info'),
             Field::make('rich_text', 'gym_info_statute', 'Club Statute Info'),
+        ]);
+        new OptionsPage('Gym Options', [
+            Field::make('file', 'gym_logo', 'Gym Logo')
+                ->set_value_type('url'),
+            Field::make('text', 'gym_logo_url', 'Gym Logo Url'),
         ]);
     }
 

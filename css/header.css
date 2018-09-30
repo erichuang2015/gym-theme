@@ -56,6 +56,9 @@
     display: inline-block;
   }
   .header__nav--mobile {
+    display: flex;
+    align-items: center;
+
     margin-left: 0;
     height: 6.7vh;
   }
@@ -63,11 +66,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .header__nav--mobile__control-bar .main-logo {
-    width: 40% !important;
-    max-width: 14rem;
-    margin-bottom: 1rem;
+    width: 14rem !important;
+    margin-top: .2rem;
   }
   .header__nav--full {
     display: none;

@@ -8,6 +8,7 @@ require_once dirname(__FILE__) . '/OptionsPage.php';
 use Carbon_Fields\Field;
 use function GymCore\Render\render_arrow_block;
 use function GymCore\Render\render_cta_button;
+use function GymCore\Render\render_main_logo;
 use GymCore\GymPages\OptionsPage;
 use GymCore\GymResources\GymResourcesManager;
 
@@ -44,14 +45,7 @@ class FrontPage
     private static function render_logo()
     {
         $subtitle = carbon_get_theme_option('front_page_logo_subtitle');
-        echo '<div class="main-logo">';
-        echo '<object type="image/svg+xml" data="/wp-content/themes/kardia/images/logo-white.svg">';
-        echo "Your browser doesn't support SVG images.";
-        echo '</object>';
-        echo '<div class="main-logo__subtitle">';
-        echo "<h2>{$subtitle}</h2>";
-        echo '</div>';
-        echo '</div>';
+        render_main_logo(false, $subtitle);
     }
 
     private static function render_cta()

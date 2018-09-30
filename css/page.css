@@ -33,6 +33,14 @@
   letter-spacing: -2px;
 }
 
+.main-logo a {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 14rem !important;
+}
+
 @media (max-width: 45em) {
   .page-hero-container .main-logo {
     width: 70% !important;

@@ -60,3 +60,31 @@ function render_gym_info($gym_info_fee_order, $gym_info_cancellation, $gym_info_
     echo '</div>';
     echo '</div>';
 }
+
+function render_main_logo($with_link = true, $subtitle = null)
+{
+    $logo = carbon_get_theme_option('gym_logo');
+    $logo_url = carbon_get_theme_option('gym_logo_url');
+    if ($subtitle) {
+        echo "<div class=\"main-logo\">";
+        if ($with_link) {
+            echo "<a href=\"{$logo_url}\"></a>";
+        }
+        echo "<object type=\"image/svg+xml\" data=\"{$logo}\">";
+        echo "Your browser doesn't support SVG images.";
+        echo '</object>';
+        echo '<div class="main-logo__subtitle">';
+        echo "<h2>{$subtitle}</h2>";
+        echo '</div>';
+        echo '</div>';
+    } else {
+        echo "<div class=\"main-logo\">";
+        if ($with_link) {
+            echo "<a href=\"{$logo_url}\"></a>";
+        }
+        echo "<object type=\"image/svg+xml\" data=\"{$logo}\">";
+        echo "Your browser doesn't support SVG images.";
+        echo '</object>';
+        echo '</div>';
+    }
+}

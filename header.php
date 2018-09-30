@@ -2,16 +2,16 @@
 <header class="header">
   <nav id="header-nav-full" class="header__nav header__nav--full">
     <?php
+require_once dirname(__FILE__) . '/core/render.php';
+
+use function GymCore\Render\render_main_logo;
+
 wp_nav_menu(['theme_location' => 'top-navigation', 'menu_class' => false, 'container' => false]);
 ?>
   </nav>
   <nav id="header-nav-mobile" class="header__nav header__nav--mobile">
     <div class="header__nav--mobile__control-bar">
-      <div class="main-logo">';
-        <object type="image/svg+xml" data="/wp-content/themes/kardia/images/logo-white.svg">
-          "Your browser doesn't support SVG images.
-        </object>
-      </div>
+      <?php render_main_logo();?>
       <i id="header-nav-closed" class="header__nav--mobile__icon fas fa-bars" onclick="toggleMenuShow();"></i>
       <i id="header-nav-opened" class="header__nav--mobile__icon fas fa-times" onclick="toggleMenuShow();"></i>
     </div>

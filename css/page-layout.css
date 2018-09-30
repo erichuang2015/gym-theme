@@ -29,8 +29,9 @@ a {
   font-family: Folklore, monospace;
 }
 .arrow-block {
-  margin-bottom: 3rem;
   display: flex;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 .arrow-block--compact .pseudo-arrow {
   margin: -1.2rem -.2rem;

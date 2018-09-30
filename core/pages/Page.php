@@ -60,7 +60,7 @@ class Page
         self::render_cta();
         echo '</section>';
         echo '<section class="page-content-container">';
-        if (!empty($custom_content_render)) {
+        if ($custom_content_render) {
             $custom_content_render();
         } else {
             self::render_content();
