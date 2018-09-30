@@ -40,6 +40,9 @@
   .page-hero-container .main-logo .main-logo__subtitle > h2 {
     font-size: 3vw !important;
   }
+  .page-title {
+    font-size: 10vw;
+  }
 }
 
 .page-hero-container .main-logo {

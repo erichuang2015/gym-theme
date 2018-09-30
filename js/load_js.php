@@ -3,6 +3,7 @@ function load_js()
 {
     $scripts = [
         'menu' => '/js/menu.js',
+        'faq' => '/js/faq.js',
     ];
 
     foreach ($scripts as $script_key => $filename) {

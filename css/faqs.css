@@ -8,6 +8,8 @@
 
   color: #000;
   background-color: #fff;
+
+  cursor: pointer;
 }
 .faq-container > div {
   padding-left: 2.5rem;
@@ -15,6 +17,9 @@
 
 .faq-container__question {
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  z-index: 1;
 }
 .faq-container__question > h1 {
   line-height: 2rem;
@@ -28,12 +33,31 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   border-bottom: 5px solid #000;
-  padding-bottom: 2.5rem;
+  padding: 0;
+  max-height: 0;
+  transition: max-height .5s ease-in-out;
+}
+
+.faq-container__answer * {
+  opacity: 0;
+  transition: max-height .5s ease-in-out, padding .2s ease-in-out, opacity .5s ease-out;
+}
+
+.faq-container__answer--show {
+  max-height: 500px;
+  padding: 0;
 }
 .faq-container:last-child > .faq-container__answer {
   border-bottom: 0;
 }
 
+.faq-container__answer--show * {
+  max-height: 500px !important;
+  padding-bottom: 1.5rem;
+  opacity: 1;
+}
 .faq-container__answer * {
   max-width: 65%;
+  max-height: 0;
+  margin: 0;
 }

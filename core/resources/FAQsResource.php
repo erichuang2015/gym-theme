@@ -11,7 +11,7 @@ class FAQsResource extends \GymCore\GymResource
 {
     public function render_faq_page($faq_post)
     {
-        echo '<div class="faq-container">';
+        echo '<div class="faq-container" onclick="toggleFAQ(arguments[0]);">';
         echo '<div class="faq-container__question">';
         echo "<h1>{$faq_post['question']}</h1>";
         echo '</div>';
