@@ -13,6 +13,12 @@
   height: 100vh;
 }
 
+@media (max-width: 45em) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar ul {
   display: flex;
   flex-flow: column;
