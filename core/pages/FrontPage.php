@@ -2,9 +2,12 @@
 namespace GymCore\GymPages;
 
 require_once dirname(__FILE__) . '/../resources/GymResourcesManager.php';
+require_once dirname(__FILE__) . '/../render.php';
 require_once dirname(__FILE__) . '/OptionsPage.php';
 
 use Carbon_Fields\Field;
+use function GymCore\Render\render_arrow_row;
+use function GymCore\Render\render_cta_button;
 use GymCore\GymPages\OptionsPage;
 use GymCore\GymResources\GymResourcesManager;
 
@@ -27,6 +30,8 @@ class FrontPage
                     Field::make('text', 'line_text'),
                 )),
             Field::make('rich_text', 'front_page_about_description', 'About Info Description'),
+            Field::make('text', 'cta_label', 'CTA Button Label'),
+            Field::make('text', 'cta_url', 'CTA Button Link URL'),
         ]);
     }
 
@@ -51,13 +56,10 @@ class FrontPage
 
     private static function render_cta()
     {
-        echo '
-            <span class="pseudo-arrow coral">\/</span>
-            <span class="pseudo-arrow coral">\/</span>
-            <span class="pseudo-arrow coral">\/</span>
-            <span class="pseudo-arrow coral">\/</span>
-            <button class="cta-button">TRAINIERE MIT UNS</button>
-        ';
+        $label = carbon_get_theme_option('cta_label');
+        $url = carbon_get_theme_option('cta_url');
+        render_arrow_row(3);
+        render_cta_button($label, $url);
     }
 
     private static function render_about_headline()
@@ -124,7 +126,7 @@ class FrontPage
 
     private static function render_courses()
     {
-        echo '<article class="front-page-content-section">';
+        echo '<article class="front-page-content-section front-page-content-section--black">';
         echo '<div class="front-page-content-section__title front-page-content-section__title--black">UNSER TRAININGSANGEBOT</div>';
         GymResourcesManager::get_courses_resource()->render_front_page();
         echo '</article>';

@@ -1,0 +1,51 @@
+.gym-info {
+  display: flex;
+  flex-flow: row wrap;
+
+  padding: 0 2rem;
+
+  background: #fff;
+  color: #e5434a;
+}
+
+.gym-info__block {
+  padding: 2rem;
+  flex: 1 1 25%;
+}
+
+.gym-info__block > *:first-child {
+  font-size: 2vw;
+  margin: 0;
+  line-height: 2rem;
+}
+
+.gym-info__block > *:not(:first-child) {
+  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 35em) and (max-width: 65em) {
+  .gym-info__block > *:first-child {
+    font-size: 2.75vw !important;
+  }
+}
+
+
+@media (max-width: 55em) {
+  .gym-info__block {
+    flex: 1 1 100%;
+  }
+  .gym-info__block:not(:last-child) {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+  .gym-info__block:last-child {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .gym-info__block > *:first-child {
+    font-size: 5vw !important;
+  }
+}

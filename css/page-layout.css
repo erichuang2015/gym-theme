@@ -25,5 +25,12 @@ a {
 }
 
 .pseudo-arrow {
+  display: inline-block;
   font-family: Folklore, monospace;
+}
+.arrow-block {
+  margin-bottom: 3rem;
+}
+.arrow-block__row .pseudo-arrow {
+  margin: 0 -2px;
 }

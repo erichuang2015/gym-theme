@@ -2,8 +2,10 @@
 namespace GymCore\GymPages;
 
 require_once dirname(__FILE__) . '/../GymPostType.php';
+require_once dirname(__FILE__) . '/../render.php';
 
 use Carbon_Fields\Field;
+use function GymCore\Render\render_arrow_row;
 use GymCore\GymPostType;
 
 class Page
@@ -18,24 +20,29 @@ class Page
             'fields' => [
                 Field::make('image', 'background_image', 'Page Hero Background Image')
                     ->set_value_type('url'),
+                Field::make('text', 'cta_label', 'CTA Button Label'),
+                Field::make('text', 'cta_url', 'CTA Button Link URL'),
             ],
         ]);
     }
 
-    private static function get_page_options()
+    public static function get_page_options()
     {
         return self::$post_type->get_post_by_id(get_the_ID());
     }
 
+    private static function render_cta_button()
+    {
+        $page_options = self::get_page_options();
+        $label = $page_options['cta_label'];
+        $url = $page_options['cta_url'];
+        echo "<a href=\"{$url}\" class=\"cta-button cta-button--white\">{$label}</a>";
+    }
+
     private static function render_cta()
     {
-        echo '
-            <span class="pseudo-arrow">\/</span>
-            <span class="pseudo-arrow">\/</span>
-            <span class="pseudo-arrow">\/</span>
-            <span class="pseudo-arrow">\/</span>
-            <button class="cta-button cta-button--white">TRAINIERE MIT UNS</button>
-        ';
+        render_arrow_row("#fff");
+        self::render_cta_button();
     }
 
     public static function render_content()

@@ -9,13 +9,6 @@
   margin: 0;
 }
 
-@media (min-width: 65em) {
-  .page-content-container {
-    max-width: 978px;
-    margin: 3rem auto;
-  }
-}
-
 .page-hero-container {
   display: flex;
   flex-flow: column nowrap;
@@ -67,5 +60,5 @@
 }
 
 .page-hero-container .cta-button {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
